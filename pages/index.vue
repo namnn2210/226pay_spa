@@ -18,7 +18,12 @@
 
 <script setup lang="ts">
 import NapThe from '@/components/NapThe.vue' // Import the RadioImage component
-
+useHead({
+  title: '226Pay - Đổi thẻ điện thoại thành tiền',  // Set the title for this page
+  meta: [
+    { name: 'description', content: '226Pay - Đổi thẻ điện thoại thành tiền' }
+  ]
+})
 const options = [
   {value: 'viettel', name: 'Viettel'},
   {value: 'mobifone', image: '/images/mb-h.png'},

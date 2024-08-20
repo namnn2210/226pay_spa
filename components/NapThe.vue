@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-12">
         <b>1. Chọn loại thẻ cào</b>
-        <RadioImage :options="options" v-model="selectedOption"/>
+        <RadioImage class="mx-5" :options="options" v-model="selectedOption"/>
       </div>
       <div class="col-md-12">
         <div class="row">

@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card h-100">
     <div class="card-header">
       <div class="row">
         <div class="col-md-6">
@@ -51,6 +51,12 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: '226Pay - Mua mã cào thẻ điện thoại',  // Set the title for this page
+  meta: [
+    { name: 'description', content: '226Pay - Mua mã cào thẻ điện thoại' }
+  ]
+})
 const options = [
   {value: 'viettel', image: '/images/vt.png'},
   {value: 'mobifone', image: '/images/mb-h.png'},

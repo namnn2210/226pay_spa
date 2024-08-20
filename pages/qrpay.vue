@@ -70,7 +70,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Dropdown from '@/components/Dropdown.vue'
-
+useHead({
+  title: '226Pay - Thu mua nạp đổi thẻ cào game sang vnđ',  // Set the title for this page
+  meta: [
+    { name: 'description', content: '226Pay - Thu mua nạp đổi thẻ cào game sang vnđ' }
+  ]
+})
 // Define selected wallet
 const selectedWallet = ref('')
 const selectedAmount = ref('')
