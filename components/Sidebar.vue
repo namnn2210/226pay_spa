@@ -90,7 +90,4 @@ ul {
 ul li {
   text-align: left;
 }
-.card-title {
-  color: #06C
-}
 </style>

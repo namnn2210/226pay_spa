@@ -86,8 +86,5 @@ const options = [
     max-width: 80px; /* Adjust image size for smaller screens */
   }
 }
-.card-title {
-  color: #06C
-}
 
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="card">
+  <div class="card h-100">
     <div class="card-header">
       <div class="row">
         <div class="col-md-6">
-          <span class="card-title">Demo - Thanh toán nhanh QR Code</span>
+          <b class="card-title">Demo - Thanh toán nhanh QR Code</b>
         </div>
       </div>
     </div>

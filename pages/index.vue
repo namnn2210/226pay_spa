@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card h-100">
     <div class="card-header">
       <div class="row">
         <div class="col-md-6">
@@ -31,7 +31,4 @@ const options = [
 </script>
 
 <style scoped>
-.card-title {
-  color: #06C
-}
 </style>
