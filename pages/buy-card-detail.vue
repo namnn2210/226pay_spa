@@ -73,13 +73,13 @@
             </p>
             <div class="table-responsive">
               <table class="table">
-                <tbody>
+                <thead>
                 <tr>
                   <td class="text-center">SL</td>
                   <td class="text-center">Loại thẻ</td>
                   <td class="text-center">Thời gian</td>
                 </tr>
-                </tbody>
+                </thead>
               </table>
             </div>
           </div>

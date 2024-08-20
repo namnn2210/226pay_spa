@@ -45,6 +45,64 @@
             </div>
             <button type="submit" class="btn btn-primary mt-3">Nạp thẻ</button>
           </div>
+          <div class="col-md-6">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                <tr class="table-active">
+                  <th>#</th>
+                  <th>Loại thẻ</th>
+                  <th>Biểu Phí</th>
+                  <th>Trạng thái</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Viettel</td>
+                  <td>36%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mobifone</td>
+                  <td>36%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Vinaphone</td>
+                  <td>29%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>VN-Mobile</td>
+                  <td>36%</td>
+                  <td class="text-danger">Bảo trì</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Gate</td>
+                  <td>30%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Zing</td>
+                  <td>29%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Garena</td>
+                  <td>29%</td>
+                  <td class="text-success">Đang hoạt động</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>

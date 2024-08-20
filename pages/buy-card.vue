@@ -23,8 +23,8 @@
             <b><i class="bi bi-joystick"></i> Nạp tự động</b>
           </p>
           <p>
-            <button class="btn btn-primary">Nạp tiền điện thoại</button>
-            <a href="#" class="m-3 text-dark">Nạp tiền điện thoại chiết khấu ưu đãi thao tác nhanh</a>
+            <a href="/topup"><button class="btn btn-primary">Nạp tiền điện thoại</button></a>
+            <a href="/topup" class="m-3 text-dark">Nạp tiền điện thoại chiết khấu ưu đãi thao tác nhanh</a>
           </p>
         </div>
         <div class="mb-3">
