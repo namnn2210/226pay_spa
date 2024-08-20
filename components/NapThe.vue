@@ -13,7 +13,7 @@
           <div class="col-md-6">
             <b>2. Nhập thông tin thẻ cào</b>
             <p>
-              <a href="#" target="_blank">Lưu ý: Nạp sai seri, mệnh giá có thể mất thẻ. Bấm vào đây xem quy tắc trước
+              <a href="#" target="_blank" style="font-size: 12px">Lưu ý: Nạp sai seri, mệnh giá có thể mất thẻ. Bấm vào đây xem quy tắc trước
                 khi nạp</a>
             </p>
             <div class="mb-3">

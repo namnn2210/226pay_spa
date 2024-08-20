@@ -1,13 +1,13 @@
 <!-- components/Header.vue -->
 <template>
-  <div class="container-sm p-3">
+  <div class="container-sm p-3 ">
     <div class="row align-items-center">
-      <div class="col-md-6">
+      <div class="col-md-6 mt-1">
         <a href="/" class="navbar-brand">
           <img src="/logo.png" alt="Logo" height="40">
         </a>
       </div>
-      <div class="col-md-6 text-end">
+      <div class="col-md-6 text-end mt-1">
         <!-- Login Form -->
         <form class="d-inline-flex">
           <div class="me-2">
@@ -39,7 +39,7 @@
   </div>
   <div class="bg-light">
     <div class="container px-0">
-      <nav class="navbar navbar-expand-lg d-flex navbar-light">
+      <nav class="navbar navbar-expand-lg d-flex navbar-light mx-3">
         <button
             class="navbar-toggler"
             type="button"
@@ -54,34 +54,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100 d-flex justify-content-center">
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/">Đổi thẻ</NuxtLink>
+              <NuxtLink class="nav-link" to="/"><b>Đổi thẻ</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/qrpay">QR Pay (Momo & Bank)</NuxtLink>
+              <NuxtLink class="nav-link" to="/qrpay"><b>QR Pay (Momo & Bank)</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/buy-card">Mua thẻ</NuxtLink>
+              <NuxtLink class="nav-link" to="/buy-card"><b>Mua thẻ</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/search">Tra cứu</NuxtLink>
+              <NuxtLink class="nav-link" to="/search"><b>Tra cứu</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/api">Tích hợp API</NuxtLink>
+              <NuxtLink class="nav-link" to="/api"><b>Tích hợp API</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/payment">Thanh toán</NuxtLink>
+              <NuxtLink class="nav-link" to="/payment"><b>Thanh toán</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/account">Tài khoản</NuxtLink>
+              <NuxtLink class="nav-link" to="/account"><b>Tài khoản</b></NuxtLink>
             </li>
           </ul>
         </div>
       </nav>
     </div>
   </div>
-
-
-
 
 </template>
 

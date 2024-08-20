@@ -14,20 +14,24 @@
 <script setup lang="ts">
 // Props for receiving data
 const props = defineProps({
+  options: {
+    type: Array,
+    required: true
+  },
   modelValue: {
     type: String,
     required: true
   }
 })
-const options = [
-  { value: 'viettel', image: '/images/vt.png' },
-  { value: 'mobifone', image: '/images/mb-h.png' },
-  { value: 'vinaphone', image: '/images/vn-h.png' },
-  { value: 'zing', image: '/images/zing-h.png' },
-  { value: 'gate', image: '/images/gate-h.png' },
-  { value: 'vnmobile', image: '/images/vnmobile.png' },
-  { value: 'garena', image: '/images/garena.png' }
-]
+// const options = [
+//   { value: 'viettel', image: '/images/vt.png' },
+//   { value: 'mobifone', image: '/images/mb-h.png' },
+//   { value: 'vinaphone', image: '/images/vn-h.png' },
+//   { value: 'zing', image: '/images/zing-h.png' },
+//   { value: 'gate', image: '/images/gate-h.png' },
+//   { value: 'vnmobile', image: '/images/vnmobile.png' },
+//   { value: 'garena', image: '/images/garena.png' }
+// ]
 </script>
 
 <style scoped>
