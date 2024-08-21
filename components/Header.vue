@@ -1,4 +1,3 @@
-<!-- components/Header.vue -->
 <template>
   <div class="container-sm p-3 ">
     <div class="row align-items-center">
@@ -8,32 +7,36 @@
         </a>
       </div>
       <div class="col-md-6 text-end mt-1">
-        <!-- Login Form -->
-        <form class="d-inline-flex">
-          <div class="me-2">
-            <input
-                type="text"
-                class="form-control"
-                id="username"
-                name="username"
-                placeholder="Tài khoản"
-                aria-label="Username"
-            />
-          </div>
-          <div class="me-2">
-            <input
-                type="password"
-                class="form-control"
-                id="password"
-                name="password"
-                placeholder="Mật khẩu"
-                aria-label="Password"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Đăng nhập
-          </button>
-        </form>
+        <template v-if="authStore.isAuthenticated">
+          <!-- Show greeting and logout button -->
+          <span class="me-3">Hello, {{ authStore.user?.username }}</span>
+          <button @click="authStore.logout" class="btn btn-outline-secondary">Logout</button>
+        </template>
+        <template v-else>
+          <form class="d-inline-flex" @submit.prevent="login">
+            <div class="me-2">
+              <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  v-model="username"
+                  placeholder="Tài khoản"
+                  aria-label="Username"
+              />
+            </div>
+            <div class="me-2">
+              <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  v-model="password"
+                  placeholder="Mật khẩu"
+                  aria-label="Password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+          </form>
+        </template>
       </div>
     </div>
   </div>
@@ -62,8 +65,15 @@
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/buy-card"><b>Mua thẻ</b></NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink class="nav-link" to="/search"><b>Tra cứu</b></NuxtLink>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Tra cứu</b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><NuxtLink class="nav-link" to="/card-search"><b>Lịch sử đổi thẻ</b></NuxtLink></li>
+                <li><NuxtLink class="nav-link" to="/qr-search"><b>Lịch sử QR Pay</b></NuxtLink></li>
+                <li><NuxtLink class="nav-link" to="/card-search"><b>Lịch sử chung</b></NuxtLink></li>
+              </ul>
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/api"><b>Tích hợp API</b></NuxtLink>
@@ -79,11 +89,34 @@
       </nav>
     </div>
   </div>
-
 </template>
 
 <script setup>
-// No script needed for basic setup
+import { ref } from 'vue'
+import { useAuthStore } from '@/stores/auth'
+const authStore = useAuthStore()
+const { $isClient } = useNuxtApp()
+
+const username = ref('')
+const password = ref('')
+const errorMessage = ref('')
+
+// Load the user from localStorage on mount
+onMounted(() => {
+  if ($isClient) {
+    authStore.loadUserFromLocalStorage()
+  }
+})
+
+const login = async () => {
+  try {
+    await authStore.login(username.value, password.value)
+    username.value = ''
+    password.value = ''
+  } catch (error) {
+    errorMessage.value = error.message
+  }
+}
 </script>
 
 <style scoped>

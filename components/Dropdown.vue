@@ -1,6 +1,5 @@
 <template>
   <div class="mb-3">
-    <label :for="id" class="form-label">{{ label }}</label>
     <select :id="id" :value="modelValue" @change="$emit('update:modelValue', $event.target.value)" class="form-select" required>
     <option value="" disabled>{{ placeholder }}</option>
     <option v-for="option in options" :key="option.value" :value="option.value">

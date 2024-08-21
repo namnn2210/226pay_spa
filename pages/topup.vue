@@ -48,9 +48,9 @@
         <p>
           <b><i class="bi bi-joystick"></i> Nạp tiền điện thoại</b>
         </p>
-        <div class="card">
-          <div class="card-header">
-            Thẻ {{selectedOption.name}} chiết khấu 1.5%
+        <div class="card no-border">
+          <div class="card-header card-info">
+            Chiết khấu 2.5% cho tất cả nhà mạng
           </div>
           <div class="card-body">
             <form @submit.prevent="handleSubmit">
@@ -81,11 +81,31 @@
               </div>
               <div class="mb-3">
                 <label for="phone" class="form-label">Số điện thoại</label>
-                <input type="number" id="phone"class="form-control" required/>
+                <input type="number" id="phone" class="form-control" required/>
+              </div>
+              <div class="mb-3">
+                <label for="password2" class="form-label">Mật khẩu cấp 2</label>
+                <input type="password" id="password2" name="password2" class="form-control" required/>
               </div>
               <button type="submit" class="btn btn-primary mt-3">Đồng ý</button>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>
+          <b><i class="bi bi-joystick"></i> Lịch sử giao dịch</b>
+        </p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <td class="text-center">Số tiền</td>
+              <td class="text-center">Tel</td>
+              <td class="text-center">Thời gian</td>
+            </tr>
+            </thead>
+          </table>
         </div>
       </div>
     </div>
@@ -94,9 +114,14 @@
 </template>
 
 <script setup lang="ts">
-
 import Dropdown from "~/components/Dropdown.vue";
 import {ref} from "vue";
+
+// Apply the auth middleware to protect this page
+definePageMeta({
+  middleware: 'auth'
+})
+
 const carriers = [
   { value: 'viettel', name: 'Viettel', image: '/images/vt.png' },
   { value: 'mobifone', name: 'Mobifone', image: '/images/mb-h.png' },
@@ -128,5 +153,12 @@ const handleSubmit = () => {
 </script>
 
 <style scoped>
-
+.no-border {
+  border: none; /* Remove the border */
+  box-shadow: none; /* Remove shadow if present */
+}
+.card-info {
+  background-color: #007bff;
+  color: white;
+}
 </style>

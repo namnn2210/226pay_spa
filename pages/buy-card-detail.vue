@@ -90,8 +90,12 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  middleware: 'auth'
+})
 import { ref } from 'vue'
 import Dropdown from "~/components/Dropdown.vue";
+
 const options = [
   { value: 'viettel', name: 'Viettel', image: '/images/vt.png' },
   { value: 'mobifone', name: 'Mobifone', image: '/images/mb-h.png' },

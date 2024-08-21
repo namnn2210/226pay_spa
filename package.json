@@ -12,11 +12,13 @@
   "dependencies": {
     "@nuxtjs/composition-api": "^0.34.0",
     "@pinia/nuxt": "^0.5.3",
+    "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "nuxt": "^3.12.4",
     "pinia": "^2.2.2",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-router": "^4.4.3"
   },
   "overrides": {
     "vue": "latest"

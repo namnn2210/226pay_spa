@@ -2,7 +2,7 @@
   <div v-if="errorMessage" class="error-message">
     {{ errorMessage }}
   </div>
-  <form @submit.prevent="handleSubmit">
+  <form>
     <div class="row">
       <div class="col-md-12">
         <b>1. Chọn loại thẻ cào</b>
@@ -43,9 +43,12 @@
               <input type="text" id="cardSerial" v-model="cardSerial" class="form-control" placeholder="Nhập số seri"
                      required/>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">Nạp thẻ</button>
+            <button @click="handleSubmit" class="btn btn-primary mt-3">
+              <span class="submit-text" v-show="isVisible">Nạp thẻ</span>
+              <span class="submit-progress spinner-grow spinner-grow-sm" v-show="isProgress">Đang xử lí... </span>
+            </button>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" v-if="authStore.isAuthenticated">
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
@@ -111,7 +114,7 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
-import {useAuthStore} from '@/stores/auth' // Import the Pinia auth store
+import {useAuthStore} from '~/stores/auth' // Import the Pinia auth store
 import RadioImage from '@/components/RadioImage.vue'
 
 const options = [
@@ -129,6 +132,8 @@ const selectedAmount = ref('')  // This will store the selected card amount
 const cardCode = ref('')  // This will store the card code input
 const cardSerial = ref('')  // This will store the card serial input
 const errorMessage = ref('')
+const isVisible = ref(true)
+const isProgress = ref(false)
 
 // Handle form submission
 const handleSubmit = () => {
@@ -154,12 +159,11 @@ const handleSubmit = () => {
     return;
   }
 
-  // You can proceed with form submission logic here
-  alert(`You selected:
-    - Card type: ${selectedOption.value}
-    - Card amount: ${selectedAmount.value}
-    - Card code: ${cardCode.value}
-    - Card serial: ${cardSerial.value}`);
+  // isVisible.value = false
+  // isProgress.value = true
+
+  alert("aaa");
+
 }
 </script>
 <style scoped>

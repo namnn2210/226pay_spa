@@ -16,20 +16,20 @@
             </div>
             <div class="card-body">
               <div class="mb-3">
+                <label for="walletDropdown" class="form-label">Chọn loại ví</label>
                 <Dropdown
                     v-model="selectedWallet"
                     :options="walletOptions"
                     placeholder="Chọn ví"
-                    label="Chọn loại ví"
                     id="walletDropdown"
                 />
               </div>
               <div class="mb-3">
+                <label for="amountDropdown" class="form-label">Chọn mệnh giá</label>
                 <Dropdown
                     v-model="selectedAmount"
                     :options="amountOptions"
                     placeholder="Chọn mệnh giá"
-                    label="Chọn mệnh giá"
                     id="amountDropdown"
                 />
               </div>
