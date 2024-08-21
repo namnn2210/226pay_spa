@@ -1,16 +1,14 @@
 <template>
   <div class="container-sm p-3 ">
     <div class="row align-items-center">
-      <div class="col-md-6 mt-1">
+      <div class="col-md-3 mt-1">
         <a href="/" class="navbar-brand">
           <img src="/logo.png" alt="Logo" height="40">
         </a>
       </div>
-      <div class="col-md-6 text-end mt-1">
+      <div class="col-md-9 text-end mt-1">
         <template v-if="authStore.isAuthenticated">
-          <!-- Show greeting and logout button -->
-          <span class="me-3">Hello, {{ authStore.user?.username }}</span>
-          <button @click="authStore.logout" class="btn btn-outline-secondary">Logout</button>
+          <img src="/images/banner.png" alt="banner">
         </template>
         <template v-else>
           <form class="d-inline-flex" @submit.prevent="login">
@@ -40,9 +38,9 @@
       </div>
     </div>
   </div>
-  <div class="bg-light">
+  <div class="bg-light ">
     <div class="container px-0">
-      <nav class="navbar navbar-expand-lg d-flex navbar-light mx-3">
+      <nav class="navbar navbar-bg navbar-expand-lg d-flex navbar-light mx-3">
         <button
             class="navbar-toggler"
             type="button"
@@ -57,32 +55,32 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100 d-flex justify-content-center">
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/"><b>Đổi thẻ</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/"><b class="text-white">Đổi thẻ</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/qrpay"><b>QR Pay (Momo & Bank)</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/qrpay"><b class="text-white">QR Pay (Momo & Bank)</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/buy-card"><b>Mua thẻ</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/buy-card"><b class="text-white">Mua thẻ</b></NuxtLink>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <b>Tra cứu</b>
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b class="text-white">Tra cứu</b>
               </a>
               <ul class="dropdown-menu">
-                <li><NuxtLink class="nav-link" to="/card-search"><b>Lịch sử đổi thẻ</b></NuxtLink></li>
-                <li><NuxtLink class="nav-link" to="/qr-search"><b>Lịch sử QR Pay</b></NuxtLink></li>
-                <li><NuxtLink class="nav-link" to="/card-search"><b>Lịch sử chung</b></NuxtLink></li>
+                <li><NuxtLink class="nav-link" to="/card-search"><b class="text-white">Lịch sử đổi thẻ</b></NuxtLink></li>
+                <li><NuxtLink class="nav-link" to="/qr-search"><b class="text-white">Lịch sử QR Pay</b></NuxtLink></li>
+                <li><NuxtLink class="nav-link" to="/card-search"><b class="text-white">Lịch sử chung</b></NuxtLink></li>
               </ul>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/api"><b>Tích hợp API</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/api"><b class="text-white">Tích hợp API</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/payment"><b>Thanh toán</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/payment"><b class="text-white">Thanh toán</b></NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/account"><b>Tài khoản</b></NuxtLink>
+              <NuxtLink class="nav-link" to="/account"><b class="text-white">Tài khoản</b></NuxtLink>
             </li>
           </ul>
         </div>
@@ -120,5 +118,7 @@ const login = async () => {
 </script>
 
 <style scoped>
-/* Optional custom styles for your navbar */
+.navbar-bg, .dropdown-menu {
+  background-color: #06C;
+}
 </style>

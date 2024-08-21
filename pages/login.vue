@@ -40,7 +40,7 @@
                 {{ errorMessage }}
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary">Login</button>
+              <button type="submit" class="btn btn-primary">Đăng nhập</button>
             </form>
             <b>Bạn chưa có tài khoản? <a href="#">Đăng kí ngay</a></b>
           </div>
