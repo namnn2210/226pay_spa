@@ -6,9 +6,9 @@
           <img src="/logo.png" alt="Logo" height="40">
         </a>
       </div>
-      <div class="col-md-9 text-end mt-1">
+      <div class="col-md-9 mt-1 text-end">
         <template v-if="authStore.isAuthenticated">
-          <img src="/images/banner.png" alt="banner">
+          <img src="/images/banner.png" alt="banner" width="660px">
         </template>
         <template v-else>
           <form class="d-inline-flex" @submit.prevent="login">

@@ -38,7 +38,7 @@
                 </div>
               </div>
             </template>
-            <div class="card mt-3">
+            <div class="card">
               <div class="card-header">
                 <b class="card-title">Liên hệ - Hỗ trợ</b>
               </div>
